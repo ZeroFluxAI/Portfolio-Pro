@@ -6,6 +6,10 @@
     <title>Mushahid Ali Kazmi — Cybersecurity & Software Engineering</title>
     <meta name="description" content="Portfolio of Mushahid Ali Kazmi — cybersecurity, network security, full-stack development, and IT project management.">
     <meta name="theme-color" content="#070b12">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Mushahid Ali Kazmi | Cybersecurity & Software Engineering">
+    <meta property="og:description" content="Explore Mushahid Ali Kazmi's cybersecurity, network defense, software engineering, and professional learning portfolio.">
+    <meta name="color-scheme" content="dark light">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icons -->
@@ -30,6 +34,7 @@
     </script>
 </head>
 <body class="font-sans antialiased transition-colors duration-500 overflow-x-hidden">
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <div id="scrollProgress" class="scroll-progress" aria-hidden="true"></div>
     <div class="site-grid" aria-hidden="true"></div>
     <div class="cursor-glow" aria-hidden="true"></div>
@@ -74,6 +79,7 @@
         </div>
     </header>
 
+    <main id="main-content">
     <!-- HERO SECTION -->
     <section class="min-h-screen flex items-center justify-center pt-24 px-6 relative">
         <div class="max-w-5xl mx-auto text-center relative z-10 animate-fade-in">
@@ -390,7 +396,19 @@
                 <h2 class="text-3xl font-extrabold mb-3">
                     <span class="accent-color font-mono text-xl">04.</span> Comprehensive Course Archive
                 </h2>
-                <p class="text-subtext text-sm mb-12">Detailed breakdown of all verified course modules completed across core domains.</p>
+                <p class="text-subtext text-sm mb-6">Explore the complete learning archive across cybersecurity, software, networking, and project management.</p>
+                <div class="course-tools card-bg rounded-2xl p-4 md:p-5 mb-10" role="search" aria-label="Search course archive">
+                    <label class="sr-only" for="courseSearch">Search courses</label>
+                    <div class="course-search-wrap">
+                        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                        <input id="courseSearch" type="search" placeholder="Search course, provider, or topic…" autocomplete="off" aria-describedby="courseResultCount">
+                        <button id="clearCourseSearch" class="clear-search" type="button" aria-label="Clear course search">Clear</button>
+                    </div>
+                    <div class="course-tools-footer">
+                        <span id="courseResultCount" class="text-xs font-mono text-subtext" aria-live="polite">Showing all 63 courses</span>
+                        <span class="text-xs text-subtext">Tip: try “Fortinet”, “security”, or “project”</span>
+                    </div>
+                </div>
             </div>
 
             <!-- DOMAIN 1: Cybersecurity & InfoSec -->
@@ -698,7 +716,7 @@
                 <div class="terminal-input-bar px-4 py-3 border-t flex items-center gap-2">
                     <span class="accent-color font-bold">➜</span>
                     <span class="accent-color-cyan font-bold">~</span>
-                    <input type="text" id="terminalInput" autofocus class="bg-transparent flex-1 focus:outline-none font-mono text-main" placeholder="Type a command...">
+                    <input type="text" id="terminalInput" aria-label="Terminal command input" autocomplete="off" spellcheck="false" class="bg-transparent flex-1 focus:outline-none font-mono text-main" placeholder="Type a command...">
                 </div>
             </div>
         </div>
@@ -729,8 +747,10 @@
         </div>
     </section>
 
+    </main>
+
     <!-- CERTIFICATE PREVIEW MODAL -->
-    <div id="certModal" class="fixed inset-0 z-50 hidden flex items-center justify-center bg-black/80 backdrop-blur-md p-4 animate-fade-in">
+    <div id="certModal" class="fixed inset-0 z-50 hidden flex items-center justify-center bg-black/80 backdrop-blur-md p-4 animate-fade-in" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalMeta">
         <div class="bg-slate-900 border border-slate-700 rounded-3xl max-w-xl w-full p-8 relative text-white shadow-2xl">
             <button onclick="closeCertModal()" class="absolute top-5 right-5 text-gray-400 hover:text-white text-xl">
                 <i class="fa-solid fa-xmark"></i>
@@ -741,7 +761,7 @@
             <div class="h-64 rounded-2xl bg-slate-950 border border-slate-800 flex flex-col items-center justify-center p-6 text-center relative overflow-hidden">
                 <div class="absolute inset-0 bg-gradient-to-tr from-emerald-500/10 to-cyan-500/10 pointer-events-none"></div>
                 <i class="fa-solid fa-award text-6xl accent-color mb-4 animate-bounce"></i>
-                <p class="text-base font-bold text-slate-100">Verified Professional Credential</p>
+                <p class="text-base font-bold text-slate-100">Credential Preview</p>
                 <p class="text-xs text-slate-400 mt-2 font-mono">Awarded to Mushahid Ali Kazmi</p>
             </div>
             
@@ -754,8 +774,9 @@
     </div>
 
     <!-- FOOTER -->
-    <footer class="py-8 text-center border-t text-xs text-subtext font-mono">
-        &copy; 2026 Mushahid Ali Kazmi. Engineered for absolute excellence.
+    <footer class="py-8 px-6 text-center border-t text-xs text-subtext font-mono footer-wrap">
+        <p>&copy; 2026 Mushahid Ali Kazmi <span aria-hidden="true">·</span> Built with security, clarity, and care.</p>
+        <a href="#main-content" class="back-to-top"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i> Back to top</a>
     </footer>
 
     <!-- Custom JavaScript -->
